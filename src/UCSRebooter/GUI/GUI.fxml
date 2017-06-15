@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="301.0" maxWidth="564.0" minHeight="301.0" minWidth="564.0" prefHeight="301.0" prefWidth="564.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UCSRebooter.Controller">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="295.0">
+         <children>
+            <Pane prefHeight="84.0" prefWidth="566.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff04" height="63.0" layoutX="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="515.0" />
+                  <TextField fx:id="textStatus" alignment="CENTER" editable="false" focusTraversable="false" layoutX="34.0" layoutY="16.0" maxWidth="500.0" prefHeight="42.0" prefWidth="496.0" promptText="Нажмите кнопку Перезагрузка">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor>
+                  </TextField>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" maxHeight="160.0" maxWidth="555.0" minHeight="160.0" minWidth="555.0" prefHeight="160.0" prefWidth="555.0" scaleShape="false">
+         <children>
+            <GridPane prefHeight="140.0" prefWidth="555.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="330.0" minWidth="10.0" prefWidth="278.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="281.0" minWidth="10.0" prefWidth="277.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="140.0" stroke="BLACK" strokeType="INSIDE" width="240.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Rectangle>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="140.0" stroke="BLACK" strokeType="INSIDE" width="240.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Rectangle>
+                  <GridPane prefHeight="178.0" prefWidth="555.0" GridPane.columnSpan="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="555.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label text="Сервер">
+                                 <HBox.margin>
+                                    <Insets left="50.0" top="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textServer" editable="false" focusTraversable="false" onAction="#reboot" prefHeight="25.0" prefWidth="38.0">
+                                 <HBox.margin>
+                                    <Insets left="90.0" top="10.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DISAPPEAR" />
+                                 </cursor>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="555.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label text="Загрузка сервера">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="40.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="textLoadServer" editable="false" focusTraversable="false" prefHeight="30.0" prefWidth="55.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DISAPPEAR" />
+                                 </cursor>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="40.0" prefWidth="555.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label text="Служба Premiera">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textService" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="38.0">
+                                 <HBox.margin>
+                                    <Insets left="28.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DISAPPEAR" />
+                                 </cursor>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="555.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Label text="Запуск служб">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="40.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="textLoadServices" editable="false" focusTraversable="false" prefHeight="30.0" prefWidth="55.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="45.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DISAPPEAR" />
+                                 </cursor>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Label text="Время" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label text="Состояние системы" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox maxHeight="100.0" maxWidth="555.0" minHeight="38.0" minWidth="564.0" prefHeight="73.0" prefWidth="564.0" scaleShape="false">
+         <children>
+            <Button id="rebootBtn" fx:id="rebootButton" disable="true" mnemonicParsing="false" onAction="#reboot" prefHeight="25.0" prefWidth="110.0" text="Перезагрузка">
+               <HBox.margin>
+                  <Insets left="90.0" top="15.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="resetButton" disable="true" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="110.0" text="Сброс">
+               <HBox.margin>
+                  <Insets left="160.0" top="15.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
